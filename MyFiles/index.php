@@ -159,7 +159,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid_3">
+				<div class="grid_32">
 					<div class="box maxheight">
 						<img src="images/box_img1.jpg" alt="">
 						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
@@ -171,7 +171,79 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid_3">
+                <div class="grid_32">
+					<div class="box maxheight">
+						<img src="images/box_img1.jpg" alt="">
+						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+                <div class="grid_32">
+					<div class="box maxheight">
+						<img src="images/box_img1.jpg" alt="">
+						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+                <div class="grid_32">
+					<div class="box maxheight">
+						<img src="images/box_img1.jpg" alt="">
+						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+                <div class="grid_32">
+					<div class="box maxheight">
+						<img src="images/box_img1.jpg" alt="">
+						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+                <div class="grid_32">
+					<div class="box maxheight">
+						<img src="images/box_img1.jpg" alt="">
+						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+                <div class="grid_32">
+					<div class="box maxheight">
+						<img src="images/box_img1.jpg" alt="">
+						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_32">
 					<div class="box maxheight">
 						<img src="images/box_img2.jpg" alt="">
 						<div class="text1"><a href="#">Anton Stegner</a></div> manager
@@ -183,7 +255,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid_3">
+				<div class="grid_32">
 					<div class="box maxheight">
 						<img src="images/box_img3.jpg" alt="">
 						<div class="text1"><a href="#">Lisa Haddon </a></div>accounter
@@ -195,7 +267,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid_3">
+				<div class="grid_32">
 					<div class="box maxheight">
 						<img src="images/box_img4.jpg" alt="">
 						<div class="text1"><a href="#">Bradley Grosh</a></div>director
@@ -370,7 +442,7 @@
 			<div class="container_12">
 				<div class="grid_12">
 					<div class="copy">
-						<a onClick="goToByScroll('page1'); return false;" href="#"><img src="images/footer_logo.png" alt=""></a>  &copy; 2013 | <a href="#">Privacy Policy</a> <br> Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a><br>Popular free web templates <a href="http://www.websitetemplatesonline.com" target="_blank">at www.WebsiteTemplatesOnline.com</a>. <a href="http://www.getjoomlatemplatesfree.com/" title="Joomla Templates for Websites">GetJoomlaTemplatesFree.com</a> - free Joomla themes for websites.
+						<a href=""><img src="images/footer_logo.png" alt=""></a>  &copy; 2013.<br> Website designed by Group 11<br>
 					</div>
 				</div>
 				<div class="clear"></div>
