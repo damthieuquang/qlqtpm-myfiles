@@ -460,15 +460,38 @@
 		<input type="name">
 		
 		<label for="username">Password:</label>
-		<p><a href="#">Forgot your password?</a>
+		
 		
 		<input type="password">
+        <p><br><a href="" id="forgot-pwd">Forgot Password?</a></p>
 		
 		<div id="lower">
 		
 		<input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
 		
 		<input type="submit" value="Login" id="login-submit">
+		
+		</div>
+		
+		</form>
+	</div>   
+</div>     
+
+
+<!--==============================Forgot your password?=================================-->
+<div class="dialog"  id="forgot-form">
+    <div id="container">
+		<div class="btnclose" id="forgot-close"></div>
+		<form onSubmit="return false">
+		
+		<label for="name">Email:</label>
+		
+		<input type="name">
+        <p><br><a href="" id="back-login">Back to login</a></p>
+		
+		<div id="lower">
+		
+		<input type="submit" value="Send" id="forgot-submit">
 		
 		</div>
 		
@@ -501,7 +524,6 @@
 		</form>
 	</div>   
 </div>  
-
 	</body>
 </html>
 
