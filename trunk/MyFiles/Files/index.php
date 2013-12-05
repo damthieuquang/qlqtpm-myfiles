@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>MyFiles</title>
-		<link rel="icon" href="php/images/favicon.ico">
-		<link rel="shortcut icon" href="php/images/favicon.ico" />
+		<link rel="icon" href="../images/favicon.ico">
+		<link rel="shortcut icon" href="../images/favicon.ico" />
 		<link rel="stylesheet" href="../css/style.css">
 		
 		<!--[if lt IE 8]>
