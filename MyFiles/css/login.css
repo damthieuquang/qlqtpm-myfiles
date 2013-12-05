@@ -26,7 +26,7 @@
 }
 
 /* Basics */
-#container {
+.dialog #container {
 	position: fixed;
 	width: 340px;
 	
@@ -57,7 +57,7 @@
 	
 }
 
-.btnclose
+.dialog .btnclose
 {
 	background:url(../images/close.png);
 	height:25px;
@@ -66,17 +66,17 @@
 	cursor:pointer;
 }
 
-.btnclose:hover
+.dialog .btnclose:hover
 {
 	background:url(../images/close2.png);
 }
 
-form {
+.dialog form {
 	margin: 0 auto;
 	margin-top: 20px;
 }
 
-label {
+.dialog label {
 	color: #555;
 	display: inline-block;
 	margin-left: 18px;
@@ -84,7 +84,7 @@ label {
 	font-size: 14px;
 }
 
-p a {
+.dialog p a {
 	font-size: 11px;
 	color: #aaa;
 	float: right;
@@ -95,18 +95,18 @@ p a {
 	transition: all .4s ease;
 }
 
-p a:hover {
+.dialog p a:hover {
 	color: #555;
 }
 
-input {
+.dialog input {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 12px;
 	outline: none;
 }
 
-input[type=name],
-input[type=password] {
+.dialog input[type=name],
+.dialog input[type=password] {
 	color: #777;
 	padding-left: 10px;
 	margin: 10px;
@@ -122,19 +122,19 @@ input[type=password] {
 	transition: all .4s ease;
 }
 
-input[type=name]:hover,
-input[type=password]:hover {
+.dialog input[type=name]:hover,
+.dialog input[type=password]:hover {
 	border: 1px solid #b6bfc0;
 	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
 }
 
-input[type=name]:focus,
-input[type=password]:focus {
+.dialog input[type=name]:focus,
+.dialog input[type=password]:focus {
 	border: 1px solid #a8c9e4;
 	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
 }
 
-#lower {
+.dialog #lower {
 	background: #ecf2f5;
 	width: 100%;
 	height: 69px;
@@ -145,12 +145,12 @@ input[type=password]:focus {
 	border-bottom-left-radius: 3px;
 }
 
-input[type=checkbox] {
+.dialog  input[type=checkbox] {
 	margin-left: 20px;
 	margin-top: 30px;
 }
 
-.check {
+.dialog .check {
 	margin-bottom: 4px;
 	padding: 0;
 	border: 0;
@@ -162,7 +162,7 @@ input[type=checkbox] {
 	text-shadow: 0 1px 0 #fff;
 }
 
-input[type=submit] {
+.dialog input[type=submit] {
 	float: right;
 	margin-right: 20px;
 	margin-top: 20px;
@@ -180,13 +180,13 @@ input[type=submit] {
 	cursor: pointer;
 }
 
-input[type=submit]:hover {
+.dialog input[type=submit]:hover {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
 	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 }
 
-input[type=submit]:active {
+.dialog input[type=submit]:active {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
 	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
