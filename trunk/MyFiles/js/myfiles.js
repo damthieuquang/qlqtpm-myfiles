@@ -12,6 +12,7 @@ $(function() {
     });
 	
 	$( "#login-submit" ).click(function() {
+		//---
 		window.location.replace("Files");
     });
 	

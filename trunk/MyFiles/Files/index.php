@@ -5,7 +5,7 @@
 		<title>MyFiles</title>
 		<link rel="icon" href="../images/favicon.ico">
 		<link rel="shortcut icon" href="../images/favicon.ico" />
-		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/stylemin.css">
 		
 		<!--[if lt IE 8]>
 			<div style=' clear: both; text-align:center; position: relative;'>
@@ -19,7 +19,7 @@
 			<link rel="stylesheet" media="screen" href="css/ie.css">
 		<![endif]-->
         
-        
+       
         	<!-- jQuery and jQuery UI (REQUIRED) -->
 		<link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

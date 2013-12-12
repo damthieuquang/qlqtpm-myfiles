@@ -35,13 +35,8 @@ $opts = array(
             'pass'   => '123456',
             'db'     => 'myfiles',
             'path'   => 1,
-        ),
-		array(
-			'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
-			'path'          => '../files/',         // path to files (REQUIRED)
-			'URL'           => dirname($_SERVER['PHP_SELF']) . '/../files/', // URL to files (REQUIRED)
-			'accessControl' => 'access'             // disable and hide dot starting files (OPTIONAL)
-		)
+			'files_table'   => 'file',
+        )
     )
 );
 

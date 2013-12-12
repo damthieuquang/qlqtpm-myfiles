@@ -195,7 +195,7 @@ abstract class elFinderVolumeDriver {
 		// order to proccess uploadAllow and uploadDeny options
 		'uploadOrder'     => array('deny', 'allow'),
 		// maximum upload file size. NOTE - this is size for every uploaded files
-		'uploadMaxSize'   => '1g',
+		'uploadMaxSize'   => 0,
 		// files dates format
 		'dateFormat'      => 'j M Y H:i',
 		// files time format
