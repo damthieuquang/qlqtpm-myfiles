@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -19,6 +20,7 @@
 		<script src="js/jquery.ui.totop.js"></script>
 		<script src="js/tms-0.4.1.js"></script>
         <script src="js/myfiles.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script><!-- js validation -->
 		<script>
 			$(document).ready(function(){
 				$('.slider_wrapper')._TMS({
@@ -97,8 +99,20 @@
 					</div>
                     <div class="menu_block2">
                     <div class="btnsheader">
-                        <a id="btnLogin" href="">Log In</a>
-                        <a id ="btnSignUp" href="">Sign Up</a>
+						<!-- kiem tra session -->
+						<?php
+							if (isset($_SESSION['myemail']))
+							{
+								echo '<p style="font-size:1.2em;">Hi <span style="color:#00ffff">'. $_SESSION['myemail'] .'</span> | <a href="controller/checkLogout.php">Logout</a></p>';
+							}
+							else
+							{
+							?>
+								<a id="btnLogin" href="">Log In</a>
+								<a id ="btnSignUp" href="">Sign Up</a>
+							<?php
+							}
+						?>
                         <div class="clear"></div>
                     </div>	
                     </div>   
@@ -232,8 +246,8 @@
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
-						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<img src="images/Lincoln94.jpg" alt="Đại Ka">
+						<div class="text1"><a href="#">Nguyễn Văn Linh</a></div>director
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -452,30 +466,29 @@
 <div class="dialog"  id="login-form">
     <div id="container">
 		<div class="btnclose" id="login-close"></div>
-		<form onSubmit="return false">
+		<form id="frmLogin" action="controller/checkLogin.php" method="post">
 		
 		<label for="name">Email:</label>
 		
-		<input type="name">
-		
+		<input type="name" name="txtEmail" id="txtEmail" class="required email">
+		<br/>
 		<label for="username">Password:</label>
-		
-		
-		<input type="password">
-        <p><br><a href="" id="forgot-pwd">Forgot Password?</a></p>
+				
+		<input type="password" name="txtPassword" id="txtPassword" class="required">
+        <br/>
+		<p><br><a href="" id="forgot-pwd">Forgot Password?</a></p>
 		
 		<div id="lower">
 		
-		<input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
+		<input type="checkbox" name="remember" id="remember"><label class="check" for="checkbox">Keep me logged in</label>
 		
 		<input type="submit" value="Login" id="login-submit">
 		
 		</div>
-		
 		</form>
+		<div class="success" style="display:none;">Nơi hiển thị kết quả</div>
 	</div>   
-</div>     
-
+</div>
 
 <!--==============================Forgot your password?=================================-->
 <div class="dialog"  id="forgot-form">
@@ -502,25 +515,25 @@
 <div class="dialog" id="signup-form">
     <div id="container">
 		<div class="btnclose" id="signup-close"></div>
-		<form onSubmit="return false">
+		<form id="frmSignup" action="controller/checkSignup.php" method="post">
 		
 		<label for="name">Email:</label>
 		
-		<input type="name">
+		<input type="name" name="Email" id="Email" class="required email"><br/>
 		
 		<label for="username">Password:</label>
 		
-		<input type="password">
-        
+		<input type="password" name="Password" id="Password" minlength="6" class="required"><br/>
+		
         <label for="username">Re-Password:</label>
 		
-		<input type="password">
+		<input type="password" name="rePassword" id="rePassword" minlength="6" class="required"><br/>
 		
 		<div id="lower">
 		<input type="submit" value="Sign Up" id="signup-submit">
 		</div>
-		
 		</form>
+		<div class="success" style="display:none;">Nơi hiển thị kết quả</div>
 	</div>   
 </div>  
 	</body>

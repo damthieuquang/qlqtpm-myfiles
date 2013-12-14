@@ -6,6 +6,11 @@
 @import "../css/grid.css";
 @import "../css/superfish.css";
 
+span {
+	color:#bf0000;
+	padding-left:20px;
+}
+
 input {
 	outline:  none !important;
 }
