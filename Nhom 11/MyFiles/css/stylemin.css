@@ -1,0 +1,52 @@
+@import "../css/reset.css";
+
+body {
+	color:#ecedef;
+	position:relative;
+	min-width:960px;
+	background: #334960;
+}
+
+/*header*/
+
+header {
+	z-index: 999;
+	left: 0;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+	background-color: #334960;
+	transition: 0.2s ease;
+	margin-left:20px;
+	margin-bottom:-80px;
+}
+
+h1 {
+	padding-top: 20px;
+	float: left;
+	z-index: 999;
+
+}
+
+/************Footer***********/
+
+footer {
+	display: block;
+	font: 13px/19px  Arial, Helvetica, sans-serif;
+	margin-left:20px;
+}
+
+footer {
+}
+
+footer a:hover {
+	color: #f17c72;
+}
+
+.copy {
+	color: #e0e8ec;
+	padding-top: 29px;
+	padding-bottom: 30px;
+	font-size: 12px;
+	line-height: 24px;
+}
