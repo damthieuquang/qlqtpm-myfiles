@@ -10,7 +10,7 @@
 		$email=strip_tags(mysql_real_escape_string($email)); 
 		$password=strip_tags(mysql_real_escape_string($password));
 		
-        $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$email' AND PASSWORD = '$password'"; 
+        $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$email' AND PASSWORD = '$password'"; echo $query;
 		$result = DataProvider::ExecuteQuery($query);
 		if (mysql_num_rows($result) == 1)
 		{
@@ -19,7 +19,7 @@
 			if($_POST['remember']) {
 				setcookie('myemail', $email, $year);
 			}
-			elseif(!$_POST['remember']) {
+			else if(!$_POST['remember']) {
 				if(isset($_COOKIE['myemail'])) {
 					$past = time() - 100;
 					setcookie('myemail', "", $past);
