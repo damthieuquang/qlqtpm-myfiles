@@ -1,4 +1,12 @@
 <?php session_start();?>
+<?php
+if (isset($_SESSION['myemail']))
+{
+	header('location: Files');
+}
+else
+{
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -99,20 +107,8 @@
 					</div>
                     <div class="menu_block2">
                     <div class="btnsheader">
-						<!-- kiem tra session -->
-						<?php
-							if (isset($_SESSION['myemail']))
-							{
-								echo '<p style="font-size:1.2em;">Hi <span style="color:#00ffff">'. $_SESSION['myemail'] .'</span> | <a href="controller/checkLogout.php">Logout</a></p>';
-							}
-							else
-							{
-							?>
-								<a id="btnLogin" href="">Log In</a>
-								<a id ="btnSignUp" href="">Sign Up</a>
-							<?php
-							}
-						?>
+                        	<a id="btnLogin" href="">Log In</a>
+							<a id ="btnSignUp" href="">Sign Up</a>
                         <div class="clear"></div>
                     </div>	
                     </div>   
@@ -539,3 +535,6 @@
 	</body>
 </html>
 
+<?php
+}						
+?>
