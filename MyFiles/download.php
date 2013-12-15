@@ -24,6 +24,7 @@
 		<![endif]-->
 	</head>
 	<body class="">
+	<?php session_start();?>
 <!--==============================header=================================-->
 		<header class="page1">
 			<div class="container_12">
@@ -32,8 +33,6 @@
 					
                     <div class="menu_block2">
                     <div class="btnsheader">
-                        <a id="btnLogin" href="">Log In</a>
-                        <a id ="btnSignUp" href="">Sign Up</a>
                         <div class="clear"></div>
                     </div>	
                     </div>   
@@ -47,13 +46,20 @@
      <div class="container">
 	<section id="content">
 		<form action="">
-			<h1>Login Form</h1>
+			<div class="button">
+			<?php
+				if (isset($_SESSION['myemail']))
+				{
+					echo "<a  href="."./Files/php/connector.php?cmd=file&target=".$_GET["target"]."&download=".$_GET["download"].">Download source file</a>";
+				}
+			else{
+				echo '<a  id="btnLogin" href="."> Login </a>';
+			}?>
+		</div><!-- button -->
+>
 			
 		</form><!-- form -->
-		<div class="button">
-			<a href="#">Download source file</a>
-		</div><!-- button -->
-	</section><!-- content -->
+			</section><!-- content -->
 </div><!-- container -->
 		</div>
 		
