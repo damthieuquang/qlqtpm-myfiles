@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 12, 2013 at 07:55 AM
+-- Generation Time: Dec 16, 2013 at 07:29 AM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.16
 
@@ -16,19 +16,13 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
---
--- Database: `myfiles`
---
-CREATE DATABASE IF NOT EXISTS `myfiles` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `myfiles`;
-
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `account`
 --
 
-CREATE TABLE IF NOT EXISTS `account` (
+CREATE TABLE `account` (
   `account_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -37,7 +31,15 @@ CREATE TABLE IF NOT EXISTS `account` (
   `total` float NOT NULL,
   `status` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `account`
+--
+
+INSERT INTO `account` (`account_id`, `username`, `password`, `email`, `accounttype_id`, `total`, `status`) VALUES
+(3, '', 'e10adc3949ba59abbe56e057f20f883e', 'quanghau@gmail.com', 1, 99, ''),
+(4, '', 'e10adc3949ba59abbe56e057f20f883e', 'quanghau1@gamil.com', 1, 99, '');
 
 -- --------------------------------------------------------
 
@@ -45,13 +47,13 @@ CREATE TABLE IF NOT EXISTS `account` (
 -- Table structure for table `accounttype`
 --
 
-CREATE TABLE IF NOT EXISTS `accounttype` (
+CREATE TABLE `accounttype` (
   `accounttype_id` int(11) NOT NULL AUTO_INCREMENT,
   `price` float NOT NULL,
   `storage` float NOT NULL,
   `fileup` float NOT NULL,
   PRIMARY KEY (`accounttype_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -59,13 +61,13 @@ CREATE TABLE IF NOT EXISTS `accounttype` (
 -- Table structure for table `feedback`
 --
 
-CREATE TABLE IF NOT EXISTS `feedback` (
+CREATE TABLE `feedback` (
   `feedback_id` int(11) NOT NULL AUTO_INCREMENT,
   `account_id` int(11) NOT NULL,
   `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `content` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`feedback_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -73,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `feedback` (
 -- Table structure for table `file`
 --
 
-CREATE TABLE IF NOT EXISTS `file` (
+CREATE TABLE `file` (
   `file_id` int(7) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(7) unsigned NOT NULL,
   `name` varchar(256) NOT NULL,
@@ -93,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   PRIMARY KEY (`file_id`),
   UNIQUE KEY `parent_name` (`parent_id`,`name`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `file`
@@ -108,13 +110,13 @@ INSERT INTO `file` (`file_id`, `parent_id`, `name`, `content`, `size`, `mtime`, 
 -- Table structure for table `filesend`
 --
 
-CREATE TABLE IF NOT EXISTS `filesend` (
+CREATE TABLE `filesend` (
   `filesend_id` int(11) NOT NULL AUTO_INCREMENT,
   `file_id` int(11) NOT NULL,
   `deadline` datetime NOT NULL,
   `link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`filesend_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
