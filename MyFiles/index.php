@@ -170,7 +170,7 @@ else
 				</div>
 				<div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
+						<img src="images/thieuquang.jpg" alt="">
 						<div class="text1"><a href="#">Đàm Thiệu Quang</a></div>
 						<div class="socials1">
 							<a href="#"></a>
@@ -182,7 +182,7 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
+						<img src="images/yenu.jpg" alt="">
 						<div class="text1"><a href="#">Nguyễn Thị Yến</a></div>
 						<div class="socials1">
 							<a href="#"></a>
@@ -206,7 +206,7 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
+						<img src="images/haunguyen.jpg" alt="">
 						<div class="text1"><a href="#">Nguyễn Trung Hậu</a></div>
 						<div class="socials1">
 							<a href="#"></a>
@@ -218,7 +218,7 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
+						<img src="images/hoanglong.jpg" alt="">
 						<div class="text1"><a href="#">Nguyễn Hoàn Long</a></div>
 						<div class="socials1">
 							<a href="#"></a>
@@ -230,7 +230,7 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
+						<img src="images/thanhtien.jpg" alt="">
 						<div class="text1"><a href="#">Huỳnh Thanh Tiến</a></div>
 						<div class="socials1">
 							<a href="#"></a>
@@ -254,7 +254,7 @@ else
 				</div>
 				<div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img2.jpg" alt="">
+						<img src="images/ngocanh.jpg" alt="">
 						<div class="text1"><a href="#">Nguyễn Thị Ngọc Anh</a></div>
 						<div class="socials1">
 							<a href="#"></a>
@@ -266,7 +266,7 @@ else
 				</div>
 				<div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img3.jpg" alt="">
+						<img src="images/thethong.jpg" alt="">
 						<div class="text1"><a href="#">Nguyễn Thế Thông</a></div>
 						<div class="socials1">
 							<a href="#"></a>
@@ -278,7 +278,7 @@ else
 				</div>
 				<div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img4.jpg" alt="">
+						<img src="images/ledieu.jpg" alt="">
 						<div class="text1"><a href="#">Lê Đình Diệu</a></div>
 						<div class="socials1">
 							<a href="#"></a>
