@@ -218,8 +218,8 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
-						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<img src="images/box_img_hoanglong.jpg" alt="">
+						<div class="text1"><a href="#">Nguyen Hoang Long</a></div>senior manager
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
