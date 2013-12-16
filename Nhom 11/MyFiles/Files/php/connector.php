@@ -26,14 +26,15 @@ function access($attr, $path, $data, $volume) {
 		:  null;                                    // else elFinder decide it itself
 }
 
+$ini_array = parse_ini_file("../../config.ini");
 $opts = array(
     'roots'  => array(
         array( // another root
             'driver' => 'MySQL',
-            'host'   => 'localhost',
-            'user'   => 'root',
-            'pass'   => '123456',
-            'db'     => 'myfiles',
+            'host'   => $ini_array["host"],
+            'user'   => $ini_array["username"],
+            'pass'   => $ini_array["password"],
+            'db'     => $ini_array["database"],
             'path'   => 1,
 			'files_table'   => 'file',
         )
