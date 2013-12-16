@@ -170,8 +170,8 @@ else
 				</div>
 				<div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
-						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<img src="images/thieuquang.jpg" alt="">
+						<div class="text1"><a href="#">Đàm Thiệu Quang</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -182,8 +182,8 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
-						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<img src="images/yenu.jpg" alt="">
+						<div class="text1"><a href="#">Nguyễn Thị Yến</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -194,8 +194,8 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
-						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<img src="images/quanghau.jpg" alt="">
+						<div class="text1"><a href="#">Trần Quang Hậu</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -206,8 +206,8 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
-						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<img src="images/haunguyen.jpg" alt="">
+						<div class="text1"><a href="#">Nguyễn Trung Hậu</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -218,8 +218,8 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img_hoanglong.jpg" alt="">
-						<div class="text1"><a href="#">Nguyen Hoang Long</a></div>senior manager
+						<img src="images/hoanglong.jpg" alt="">
+						<div class="text1"><a href="#">Nguyễn Hoàn Long</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -230,8 +230,8 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
-						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<img src="images/thanhtien.jpg" alt="">
+						<div class="text1"><a href="#">Huỳnh Thanh Tiến</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -243,7 +243,7 @@ else
                 <div class="grid_32">
 					<div class="box maxheight">
 						<img src="images/Lincoln94.jpg" alt="Đại Ka">
-						<div class="text1"><a href="#">Nguyễn Văn Linh</a></div>director
+						<div class="text1"><a href="#">Nguyễn Văn Linh</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -254,8 +254,8 @@ else
 				</div>
 				<div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img2.jpg" alt="">
-						<div class="text1"><a href="#">Anton Stegner</a></div> manager
+						<img src="images/ngocanh.jpg" alt="">
+						<div class="text1"><a href="#">Nguyễn Thị Ngọc Anh</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -266,8 +266,8 @@ else
 				</div>
 				<div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img3.jpg" alt="">
-						<div class="text1"><a href="#">Lisa Haddon </a></div>accounter
+						<img src="images/thethong.jpg" alt="">
+						<div class="text1"><a href="#">Nguyễn Thế Thông</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
@@ -278,8 +278,8 @@ else
 				</div>
 				<div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img4.jpg" alt="">
-						<div class="text1"><a href="#">Bradley Grosh</a></div>director
+						<img src="images/ledieu.jpg" alt="">
+						<div class="text1"><a href="#">Lê Đình Diệu</a></div>
 						<div class="socials1">
 							<a href="#"></a>
 							<a href="#"></a>
