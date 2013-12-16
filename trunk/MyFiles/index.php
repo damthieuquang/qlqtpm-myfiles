@@ -194,7 +194,7 @@ else
 				</div>
                 <div class="grid_32">
 					<div class="box maxheight">
-						<img src="images/box_img1.jpg" alt="">
+						<img src="images/quanghau.jpg" alt="">
 						<div class="text1"><a href="#">Trần Quang Hậu</a></div>
 						<div class="socials1">
 							<a href="#"></a>
