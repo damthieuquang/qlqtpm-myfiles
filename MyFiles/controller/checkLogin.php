@@ -10,7 +10,7 @@
 		$email=strip_tags(mysql_real_escape_string($email)); 
 		$password=strip_tags(mysql_real_escape_string($password));
 		
-        $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$email' AND PASSWORD = '$password'"; echo $query;
+        $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$email' AND PASSWORD = '$password'";
 		$result = DataProvider::ExecuteQuery($query);
 		if (mysql_num_rows($result) == 1)
 		{
