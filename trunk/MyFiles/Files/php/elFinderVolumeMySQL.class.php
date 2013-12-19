@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /**
  * Simple elFinder driver for MySQL.
  *
@@ -203,8 +203,8 @@ class elFinderVolumeMySQL extends elFinderVolumeDriver {
 	 * @author Dmitry (dio) Levashov
 	 **/
 	protected function make($path, $name, $mime) {
-		$sql = 'INSERT INTO %s (`parent_id`, `name`, `size`, `mtime`, `mime`, `content`, `read`, `write`) VALUES ("%s", "%s", 0, %d, "%s", "", "%d", "%d")';
-		$sql = sprintf($sql, $this->tbf, $path, $this->db->real_escape_string($name), time(), $mime, $this->defaults['read'], $this->defaults['write']);
+		$sql = 'INSERT INTO %s (`parent_id`, `name`, `size`, `mtime`, `mime`, `content`, `read`, `write`,`account_id`) VALUES ("%s", "%s", 0, %d, "%s", "", "%d", "%d","%d")';
+		$sql = sprintf($sql, $this->tbf, $path, $this->db->real_escape_string($name), time(), $mime, $this->defaults['read'], $this->defaults['write'], $_SESSION['fileid']);
 		// echo $sql;
 		return $this->query($sql) && $this->db->affected_rows > 0;
 	}
@@ -326,7 +326,7 @@ class elFinderVolumeMySQL extends elFinderVolumeDriver {
 		$sql = 'SELECT f.file_id, f.parent_id, f.name, f.size, f.mtime AS ts, f.mime, f.read, f.write, f.locked, f.hidden, f.width, f.height, IF(ch.file_id, 1, 0) AS dirs 
 				FROM '.$this->tbf.' AS f 
 				LEFT JOIN '.$this->tbf.' AS ch ON ch.parent_id=f.file_id AND ch.mime="directory"
-				WHERE f.parent_id="'.$path.'"
+				WHERE f.account_id=19 and f.parent_id="'.$path.'"
 				GROUP BY f.file_id';
 				
 		$res = $this->query($sql);
@@ -775,9 +775,9 @@ class elFinderVolumeMySQL extends elFinderVolumeDriver {
 				fclose($trgfp);
 				
 				$sql = $id > 0
-					? 'REPLACE INTO %s (file_id, parent_id, name, content, size, mtime, mime, width, height) VALUES ('.$id.', %d, "%s", LOAD_FILE("%s"), %d, %d, "%s", %d, %d)'
-					: 'INSERT INTO %s (parent_id, name, content, size, mtime, mime, width, height) VALUES (%d, "%s", LOAD_FILE("%s"), %d, %d, "%s", %d, %d)';
-				$sql = sprintf($sql, $this->tbf, $dir, $this->db->real_escape_string($name), $this->loadFilePath($tmpfile), $size, time(), $mime, $w, $h);
+					? 'REPLACE INTO %s (file_id, parent_id, name, content, size, mtime, mime, width, height, account_id) VALUES ('.$id.', %d, "%s", LOAD_FILE("%s"), %d, %d, "%s", %d, %d, %d)'
+					: 'INSERT INTO %s (parent_id, name, content, size, mtime, mime, width, height, account_id) VALUES (%d, "%s", LOAD_FILE("%s"), %d, %d, "%s", %d, %d, %d)';
+				$sql = sprintf($sql, $this->tbf, $dir, $this->db->real_escape_string($name), $this->loadFilePath($tmpfile), $size, time(), $mime, $w, $h, $_SESSION['fileid']);
 
 				$res = $this->query($sql);
 				unlink($tmpfile);

@@ -12,9 +12,11 @@
 		
         $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$email' AND PASSWORD = '$password'";
 		$result = DataProvider::ExecuteQuery($query);
+		$re = mysql_fetch_array($result,MYSQL_ASSOC);
 		if (mysql_num_rows($result) == 1)
 		{
 			$_SESSION['myemail'] = $email;
+			$_SESSION['fileid'] = $re['account_id'];
 			$year = time() + 31536000;
 			if($_POST['remember']) {
 				setcookie('myemail', $email, $year);
