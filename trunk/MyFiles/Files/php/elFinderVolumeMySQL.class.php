@@ -326,7 +326,7 @@ class elFinderVolumeMySQL extends elFinderVolumeDriver {
 		$sql = 'SELECT f.file_id, f.parent_id, f.name, f.size, f.mtime AS ts, f.mime, f.read, f.write, f.locked, f.hidden, f.width, f.height, IF(ch.file_id, 1, 0) AS dirs 
 				FROM '.$this->tbf.' AS f 
 				LEFT JOIN '.$this->tbf.' AS ch ON ch.parent_id=f.file_id AND ch.mime="directory"
-				WHERE f.account_id=19 and f.parent_id="'.$path.'"
+				WHERE (f.account_id = 0 or f.account_id  = '.$_SESSION['fileid'].' ) AND  f.parent_id="'.$path.'"
 				GROUP BY f.file_id';
 				
 		$res = $this->query($sql);
@@ -531,10 +531,9 @@ class elFinderVolumeMySQL extends elFinderVolumeDriver {
 		$sql = 'SELECT f.file_id, f.parent_id, f.name, f.size, f.mtime AS ts, f.mime, f.read, f.write, f.locked, f.hidden, f.width, f.height, IF(ch.file_id, 1, 0) AS dirs
 				FROM '.$this->tbf.' AS f 
 				LEFT JOIN '.$this->tbf.' AS p ON p.file_id=f.parent_id
-				LEFT JOIN '.$this->tbf.' AS ch ON ch.parent_id=f.file_id AND ch.mime="directory"
+				LEFT JOIN '.$this->tbf.' AS ch ON ch.parent_id=f.file_id AND ch.mime="directory" 
 				WHERE f.file_id="'.$path.'"
 				GROUP BY f.file_id';
-
 		$res = $this->query($sql);
 		
 		if ($res) {
