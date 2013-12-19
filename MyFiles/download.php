@@ -44,13 +44,17 @@
 		<div id="page1" class="content">
         
      <div class="container">
+	 <?php echo'<div><p style="color:black;font-size:200%;">File name: '.$_GET["name"].'</p></div>';?>
 	<section id="content">
+	
 		<form action="">
+		
 			<div class="button">
 			<?php
 				if (isset($_SESSION['myemail']))
 				{
-					echo "<a  href="."./Files/php/connector.php?cmd=file&target=".$_GET["target"]."&download=".$_GET["download"].">Download source file</a>";
+					
+					echo "<a  href="."./Files/php/connector.php?cmd=file&target=".$_GET["target"]."&download=".$_GET["download"].">Download File</a>";
 				}
 			else{
 				echo '<a  id="btnLogin" href="."> Login </a>';
