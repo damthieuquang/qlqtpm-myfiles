@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="css/download.css">
 		<script src="js/jquery.js"></script>
         <script src="js/myfiles.js"></script>
-        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 		
 		<!--[if lt IE 8]>
 			<div style=' clear: both; text-align:center; position: relative;'>
@@ -30,12 +29,10 @@
 		<header class="page1">
 			<div class="container_12">
 				<div class="grid_12">
-					<h1><a href=""><img src="images/logo.png" alt="Gerald Harris attorney at law"></a></h1>
+					<h1><a href="#" onClick="goToByScroll('page1'); return false;"><img src="images/logo.png" alt="Gerald Harris attorney at law"></a></h1>
 					
                     <div class="menu_block2">
                     <div class="btnsheader">
-                    	<a id="btnLogin" href="">Log In</a>
-                        <a id ="btnSignUp" href="">Sign Up</a>
                         <div class="clear"></div>
                     </div>	
                     </div>   
@@ -45,38 +42,29 @@
 		</header>
 <!--=======content================================-->
 		<div id="page1" class="content">
-<?php
-		if(isset($_GET["file"]))
-		{
-?>       
+        
      <div class="container">
 	<section id="content">
-
-    	<form action="">
-			<h1><?php echo $_GET["file"]?></h1>
-			
-		</form><!-- form -->
+		<form action="">
 			<div class="button">
 			<?php
-            	// echo "<a  href="."./Files/php/connector.php?cmd=file&target=".$_GET["target"]."&download=".$_GET["download"].">Download  file</a>";
-			?>
-            <a href="#">Download source file</a>
-		</div><!-- button -->      
+				if (isset($_SESSION['myemail']))
+				{
+					echo "<a  href="."./Files/php/connector.php?cmd=file&target=".$_GET["target"]."&download=".$_GET["download"].">Download source file</a>";
+				}
+			else{
+				echo '<a  id="btnLogin" href="."> Login </a>';
+			}?>
+		</div><!-- button -->
+>
+			
+		</form><!-- form -->
 			</section><!-- content -->
 </div><!-- container -->
-<?php
-		}
-		else
-		{
-?>
-		<div id="filenotfound" style="font-size:24px; color:#000">File not found</div>
-<?php
-		}
-?>  
 		</div>
 		
 <!--==============================footer=================================-->
-		<footer id="footer">
+		<footer>
 			<div class="container_12">
 				<div class="grid_12">
 					<div class="copy">
@@ -91,44 +79,22 @@
 <div class="dialog"  id="login-form">
     <div id="container">
 		<div class="btnclose" id="login-close"></div>
-		<form id="frmLogin" action="controller/checkLogin.php" method="post">
-		
-		<label for="name">Email:</label>
-		
-		<input type="name" name="txtEmail" id="txtEmail" class="required email">
-		<br/>
-		<label for="username">Password:</label>
-				
-		<input type="password" name="txtPassword" id="txtPassword" class="required">
-        <br/>
-		<p><br><a href="" id="forgot-pwd">Forgot Password?</a></p>
-		
-		<div id="lower">
-		
-		<input type="checkbox" name="remember" id="remember"><label class="check" for="checkbox">Keep me logged in</label>
-		
-		<input type="submit" value="Login" id="login-submit">
-		
-		</div>
-		</form>
-		<div class="success" style="display:none;">Nơi hiển thị kết quả</div>
-	</div>   
-</div>
-
-<!--==============================Forgot your password?=================================-->
-<div class="dialog"  id="forgot-form">
-    <div id="container">
-		<div class="btnclose" id="forgot-close"></div>
 		<form onSubmit="return false">
 		
 		<label for="name">Email:</label>
 		
 		<input type="name">
-        <p><br><a href="" id="back-login">Back to login</a></p>
+		
+		<label for="username">Password:</label>
+		<p><a href="#">Forgot your password?</a>
+		
+		<input type="password">
 		
 		<div id="lower">
 		
-		<input type="submit" value="Send" id="forgot-submit">
+		<input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
+		
+		<input type="submit" value="Login" id="login-submit">
 		
 		</div>
 		
@@ -140,25 +106,25 @@
 <div class="dialog" id="signup-form">
     <div id="container">
 		<div class="btnclose" id="signup-close"></div>
-		<form id="frmSignup" action="controller/checkSignup.php" method="post">
+		<form onSubmit="return false">
 		
 		<label for="name">Email:</label>
 		
-		<input type="name" name="Email" id="Email" class="required email"><br/>
+		<input type="name">
 		
 		<label for="username">Password:</label>
 		
-		<input type="password" name="Password" id="Password" minlength="6" class="required"><br/>
-		
+		<input type="password">
+        
         <label for="username">Re-Password:</label>
 		
-		<input type="password" name="rePassword" id="rePassword" minlength="6" class="required"><br/>
+		<input type="password">
 		
 		<div id="lower">
 		<input type="submit" value="Sign Up" id="signup-submit">
 		</div>
+		
 		</form>
-		<div class="success" style="display:none;">Nơi hiển thị kết quả</div>
 	</div>   
 </div>  
 
