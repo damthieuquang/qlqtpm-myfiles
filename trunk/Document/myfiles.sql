@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 19, 2013 at 06:41 AM
+-- Generation Time: Dec 19, 2013 at 08:17 AM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.16
 
@@ -36,14 +36,15 @@ CREATE TABLE IF NOT EXISTS `account` (
   `total` float NOT NULL,
   `status` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `account`
 --
 
 INSERT INTO `account` (`account_id`, `password`, `email`, `accounttype_id`, `total`, `status`) VALUES
-(1, 'e10adc3949ba59abbe56e057f20f883e', 'quanghau@gmail.com', 1, 99, '');
+(1, 'e10adc3949ba59abbe56e057f20f883e', 'quanghau@gmail.com', 1, 99, ''),
+(5, 'e10adc3949ba59abbe56e057f20f883e', 'quanghau2@gmail.com', 1, 99, '');
 
 -- --------------------------------------------------------
 
@@ -109,15 +110,19 @@ CREATE TABLE IF NOT EXISTS `file` (
   `link` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`file_id`),
   UNIQUE KEY `parent_name` (`parent_id`,`name`),
-  KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+  KEY `parent_id` (`parent_id`),
+  KEY `file_id` (`file_id`),
+  KEY `file_id_2` (`file_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `file`
 --
 
 INSERT INTO `file` (`file_id`, `parent_id`, `name`, `content`, `size`, `mtime`, `mime`, `read`, `write`, `locked`, `hidden`, `width`, `height`, `account_id`, `public`, `link`) VALUES
-(1, 0, 'HOME', '', 0, 0, 'directory', '1', '1', '0', '0', 0, 0, 1, 0, '');
+(1, 0, 'HOME', '', 0, 0, 'directory', '1', '1', '0', '0', 0, 0, 0, 0, ''),
+(7, 1, 'TEST1', '', 0, 1387435746, 'directory', '1', '1', '0', '0', 0, 0, 1, 0, ''),
+(13, 7, 'hau', '', 0, 1387439520, 'text/plain', '1', '1', '0', '0', 0, 0, 1, 0, '');
 
 -- --------------------------------------------------------
 
