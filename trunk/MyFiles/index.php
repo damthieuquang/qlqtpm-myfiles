@@ -126,31 +126,31 @@ else
 							<li>
 								<img src="images/spacer.gif" alt="">
 								<div class="caption banner">
-									<h2>Chia sẽ tập tin an toàn theo phong cách chuyên nghiệp</h2>
+									<h2>Let Us Show You the Way to Success</h2>
 								</div>
 							</li>
 							<li>
 								<img src="images/spacer.gif" alt="">
 								<div class="caption banner">
-									<h2>Chia sẽ từ bất cứ nơi đâu</h2>
+									<h2>Interminable Energy for Your Project</h2>
 								</div>
 							</li>
 							<li>
 								<img src="images/spacer.gif" alt="">
 								<div class="caption banner">
-									<h2>Mang cả thế giới giải trí theo bạn</h2>
+									<h2>We know how to solve your problems!</h2>
 								</div>
 							</li>
 							<li>
 								<img src="images/spacer.gif" alt="">
 								<div class="caption banner">
-									<h2>Hãy đồng hành cùng chúng tôi</h2>
+									<h2>Make your business a booming one!</h2>
 								</div>
 							</li>
 						</ul>
 					</div>
 					<div class="socials">
-						<a href="http://www.facebook.com/groups/527756400638594/" target="_blank"></a>
+						<a href="#"></a>
 						<a href="#"></a>
 						<a href="#"></a>
 						<a href="#"></a>
@@ -162,9 +162,9 @@ else
 			<div class="container_12">
 				<div class="grid_12">
 					<div class="slogan">
-						<h3>Chúng tôi dành những <a onClick="goToByScroll('page3'); return false;" href="#"><span>dịch vụ</span></a> chuyên nghiệp nhất cho <a onClick="goToByScroll('page4'); return false;" href="#"><em>khách hàng</em></a></h3>
+						<h3>Only Professional <a onClick="goToByScroll('page3'); return false;" href="#"><span>Services</span></a> for Our <a onClick="goToByScroll('page4'); return false;" href="#"><em>Clients</em></a></h3>
 						<div class="text1">
-							<!--<a href="http://blog.templatemonster.com/free-website-templates/" rel="nofollow" class="tm_link"> Click here</a> --> Đội ngũ phát triển với những thành viên ưu tú nhất <!--<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis erat mattis neque facilisis, sit amet ultricies-->
+							<a href="http://blog.templatemonster.com/free-website-templates/" rel="nofollow" class="tm_link"> Click here</a> for more info about this free website template created by TemplateMonster.com <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis erat mattis neque facilisis, sit amet ultricies
 						</div>
 					</div>
 				</div>
@@ -294,36 +294,34 @@ else
 			<div class="container_12">
 				<div class="grid_12">
 					<div class="slogan">
-						<h3>Dịch vụ</h3>
+						<h3>Our Services</h3>
 						<div class="text1">
-							Hỗ trợ người dùng upload file có kích thước 10GB.
-							</br> Truy cập từ mọi thiết bị.
-							</br> Hỗ trợ làm việc theo nhóm.
+							Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus libero. Praesent faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequat. Curabitur vel lorem sit amet nulla ullamcorper fermentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						</div>
 					</div>
 				</div>
 				<div class="grid_3">
 					<div class="box maxheight1">
 						<img src="images/box1_img1.png" alt="">
-						<div class="text1"><a href="#">Lite</a></div>Miễn phí 2GB dung lượng lưu trữ, share file đến 250MB, tối đa 5 chữ kí điện tử.
+						<div class="text1"><a href="#">Strategy</a></div>Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus libero.
 					</div>
 				</div>
 				<div class="grid_3">
 					<div class="box maxheight1">
 						<img src="images/box1_img2.png" alt="">
-						<div class="text1"><a href="">Professional</a></div>Send file dung lượng lớn đến 2GB, không giới hạn lưu trữ, không giới hạn chữ ký điện tử.
-					</div>								
+						<div class="text1"><a href="#">Research</a></div>Ite auctor non pellentesque vel, aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibhh sagittis ut.
+					</div>
 				</div>
 				<div class="grid_3">
 					<div class="box maxheight1">
 						<img src="images/box1_img3.png" alt="">
-						<div class="text1"><a href="#">Teams</a></div>Send file đến 10GB, không giới hạn lưu trữ và chữ ký điện tử.
+						<div class="text1"><a href="#">Development</a></div>Praesent faucibusamus ater asmagna non nunc tristique rhoncus. Aliquam nib ante, tas id dictum aluctus libero.
 					</div>
 				</div>
 				<div class="grid_3">
 					<div class="box maxheight1">
 						<img src="images/box1_img4.png" alt="">
-						<div class="text1"><a href="#">Enterprise</a></div>Gọi cho chúng tôi để có được giá tốt nhất.
+						<div class="text1"><a href="#">Consulting</a></div>Etiam dui eros na non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a commodo luctus libero.
 					</div>
 				</div>
 			</div>
@@ -331,32 +329,32 @@ else
 		<div id="page4" class="content">
 			<div class="container_12">
 				<div class="grid_12">
-					<h3>Khách hàng</h3>
+					<h3>Our Clients</h3>
 				</div>
 				<div class="companies">
 					<div class="grid_3">
 						<img src="images/logo1.jpg" alt="">
-						<div class="text1">Công ty Tân Hiệp Phát</div>"Hôm nay phải hơn ngày hôm qua nhưng không bằng ngày mai"
+						<div class="text1">Company Name</div>Aliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesent.
 						<br>
-						<a href="http://www.thp.com.vn/" target="_blank">Go to Site</a>
+						<a href="#">Go to Site</a>
 					</div>
 					<div class="grid_3">
 						<img src="images/logo2.jpg" alt="">
-						<div class="text1">VNG Corporation</div>Luôn đón nhận thử thách mới với sứ mệnh Phát triển Internet để thay đổi cuộc sống người Việt Nam.
+						<div class="text1">Company Name</div>Fusce adipiscing quam id risus gittis, non consequat lacus interdumoin.
 						<br>
-						<a href="http://www.vng.com.vn/vn/index.html" target="_blank">Go to Site</a>
+						<a href="#">Go to Site</a>
 					</div>
 					<div class="grid_3">
 						<img src="images/logo3.jpg" alt="">
-						<div class="text1">Coop Mart</div>Bạn của mọi nhà
+						<div class="text1">Company Name</div>Quisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus um.
 						<br>
-						<a href="http://www.co-opmart.com.vn/" target="_blank">Go to Site</a>
+						<a href="#">Go to Site</a>
 					</div>
 					<div class="grid_3">
 						<img src="images/logo4.jpg" alt="">
-						<div class="text1">Nguyễn Kim</div>Siêu thị điện máy Nguyễn Kim - Top 500 nhà bán lẻ hàng đầu châu Á với các sản phẩm điện tử, điện lạnh, điện gia dụng, điện thoại di động, thiết bị tin học...
+						<div class="text1">Company Name</div>Courrewerwe abitur vel lorem sit amet ulla ullamcorper fermentumn vitae.
 						<br>
-						<a href="http://www.nguyenkim.com/" target="_blank">Go to Site</a>
+						<a href="#">Go to Site</a>
 					</div>
 					<div class="clear"></div>
 					<div class="grid_3">
@@ -511,7 +509,7 @@ else
 
 <!--==============================Sign up=================================-->
 <div class="dialog" id="signup-form">
-    <div id="container"  style="margin-top:-200px;">
+    <div id="container">
 		<div class="btnclose" id="signup-close"></div>
 		<form id="frmSignup" action="controller/checkSignup.php" method="post">
 		
@@ -531,9 +529,7 @@ else
 		<input type="submit" value="Sign Up" id="signup-submit">
 		</div>
 		</form>
-		<div class="success" style="display:none;">
-        
-        </div>
+		<div class="success" style="display:none;">Nơi hiển thị kết quả</div>
 	</div>   
 </div>  
 	</body>
