@@ -44,7 +44,7 @@
 		<div id="page1" class="content">
         
      <div class="container">
-	 <?php echo'<div><p style="color:black;font-size:200%;">File name: '.$_GET["name"].'</p></div>';?>
+	 <?php echo'<div><p style="color:black;font-size:200%;">'.$_GET["name"].'</p></div>';?>
 	<section id="content">
 	
 		<form action="">

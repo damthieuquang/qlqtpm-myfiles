@@ -28,12 +28,15 @@
 				}
 			}
 			?>
-			<script type='text/JavaScript'>setTimeout('location.href ="Files";',0);</script>
+            <p ><img src="images/register-success.png"><br>
+            Login successfully!
+            </p>
+			<script type='text/JavaScript'>setTimeout('location.href ="Files";',1500);</script>
 			<?php
 		}
 		else
 		{
-			echo '<p class="success">Username or password is blank!</p>';
+			echo '<p class="success">Email or password is not correct!</p>';
 			echo '<p class="success"><button id="try_it" style="width:80px; height:30px;">Try it</button></p>';
 		}	
 	}

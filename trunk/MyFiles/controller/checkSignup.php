@@ -2,6 +2,7 @@
 	session_start();
 	ob_start();
 	include_once("DataProvider.php");
+	include_once("MailHandler.php");
 	if($_POST){
 		// Đưa dữ liệu vào các biến
 		$email = $_POST['email'];
@@ -27,13 +28,25 @@
 			exit;
 		}
 		$type_id = 1;
-		$total = 99;
-		$query = "insert into `account` (`password`,`email`,`accounttype_id`,`total`) values('{$password}','{$email}',{$type_id},{$total})";
+		$total = 0;
+		$query = "insert into `account` (`password`,`email`,`accounttype_id`,`total`, `status`) values('{$password}','{$email}',{$type_id},{$total}, 'block')";
 		$result = DataProvider::ExecuteQuery($query);
 		if ($result)
 		{
-			echo '<p class="success">Created an account successfully!</p>';
-			echo '<p class="success"><button id="frm-btnLogin" style="width:80px; height:30px;">Login</button></p>';
+			$query = "SELECT account_id FROM ACCOUNT WHERE EMAIL like '".$email."'";
+			$result = DataProvider::ExecuteQuery($query);
+			$re = mysql_fetch_array($result,MYSQL_ASSOC);
+			$linlactive = "http://localhost/MyFiles/active.php?id=" . $re['account_id'];
+			$body = "<p>Welcome to MyFiles! Please click on the following link to confirm your free MyFiles account:<br>";
+			$body .= "<a href='".$linlactive."' target='_blank'>LINK</a><br><br>Best regards.</p>";
+			MailHandler::Send($email, "MyFiles Sign up", $body);
+			?>
+            <p ><img src="images/register-success.png"><br>
+            Created an account successfully!<br>
+            Please check your email and click the link to confirm your account
+            </p>
+            <p ><button id="frm-btnLogin" style="width:80px; height:30px;">OK</button></p>
+            <?php
 		}
 		else
 		{
