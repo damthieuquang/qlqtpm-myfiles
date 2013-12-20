@@ -111,7 +111,7 @@ $(function() {
 			});
 		});
     });
-	
+
 	$( 'body' ).on('click', '#try_its', function(){
 		  $('div.success').fadeOut(0);
 		  $('form#frmSignup').show();
@@ -122,7 +122,6 @@ $(function() {
 		  $('div.success').fadeOut(0);
 		  $('form#frmSignup').show();
 		  $( "#signup-form" ).hide();
-		  $( "#login-form" ).show();
 		  return false;
     });
 });

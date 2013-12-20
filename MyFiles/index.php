@@ -511,7 +511,7 @@ else
 
 <!--==============================Sign up=================================-->
 <div class="dialog" id="signup-form">
-    <div id="container">
+    <div id="container"  style="margin-top:-200px;">
 		<div class="btnclose" id="signup-close"></div>
 		<form id="frmSignup" action="controller/checkSignup.php" method="post">
 		
@@ -531,7 +531,9 @@ else
 		<input type="submit" value="Sign Up" id="signup-submit">
 		</div>
 		</form>
-		<div class="success" style="display:none;">Nơi hiển thị kết quả</div>
+		<div class="success" style="display:none;">
+        
+        </div>
 	</div>   
 </div>  
 	</body>
