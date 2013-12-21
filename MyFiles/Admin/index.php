@@ -59,41 +59,33 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 			<div id="content">
 				<table>
 					<tr>
-						<td width="4%" class="td1"><b>STT</b></td>
-						<td width="10%" class="td1"><b>ACCOUT_ID</b></td>
-						<td width="20%" class="td2"><b>USERNAME</b></td>
-						<td width="26%" class="td2"><b>EMAIL</b></td>
+						<td width="6%" class="td1"><b>STT</b></td>
+						<td width="12%" class="td1"><b>ACCOUT_ID</b></td>
+						<td width="28%" class="td2"><b>EMAIL</b></td>
 						<td width="10%" class="td1"><b>ACCOUTTYPE_ID</b></td>
-						<td width="10%" class="td2"><b>TOTAL</b></td>
+						<td width="14%" class="td2"><b>TOTAL</b></td>
 						<td width="20%" class="td2"><b>STATUS</b></td>
 					</tr>
+					<?php
+						include_once("../controller/DataProvider.php");
+						$query = "SELECT * FROM ACCOUNT";
+						$result = DataProvider::ExecuteQuery($query);
+						$dem = 1;
+						while($row = mysql_fetch_array($result,MYSQL_ASSOC))
+						{
+							?>
 					<tr>
-						<td class="td1">1</td>
-						<td class="td1">12</td>
-						<td class="td2">Lincoln</td>
-						<td class="td2">nvlinh@gmail.com</td>
-						<td class="td1">2</td>
-						<td class="td2">10000000000</td>
-						<td class="td2">Thành viên tích cực</td>
+						<td class="td1"><?php echo $dem;?></td>
+						<td class="td1"><?php echo $row["account_id"];?></td>
+						<td class="td2"><?php echo $row["email"];?></td>
+						<td class="td1"><?php echo $row["accounttype_id"];?></td>
+						<td class="td2"><?php echo $row["total"];?></td>
+						<td class="td2"><?php echo $row["status"];?></td>
 					</tr>
-					<tr>
-						<td class="td1">1</td>
-						<td class="td1">12</td>
-						<td class="td2">Lincoln</td>
-						<td class="td2">nvlinh@gmail.com</td>
-						<td class="td1">2</td>
-						<td class="td2">10000000000</td>
-						<td class="td2">Thành viên tích cực</td>
-					</tr>
-					<tr>
-						<td class="td1">1</td>
-						<td class="td1">12</td>
-						<td class="td2">Lincoln</td>
-						<td class="td2">nvlinh@gmail.com</td>
-						<td class="td1">2</td>
-						<td class="td2">10000000000</td>
-						<td class="td2">Thành viên tích cực</td>
-					</tr>
+							<?php
+							$dem++;
+						}
+					?>
 				</table>
 			</div>
 		</section>

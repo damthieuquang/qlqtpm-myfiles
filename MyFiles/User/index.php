@@ -49,7 +49,7 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 		<header class="page1">
 			<div class="container_12">
 				<div class="grid_12">
-					<h1><a href="" ><img src="../Admin/images/logo.png"></a></h1>
+					<h1><a href="../Files/" ><img src="../Admin/images/logo.png"></a></h1>
 				</div>
 				<div class="clear"></div>
 				<h1>| User profile</h1>
@@ -65,8 +65,22 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 						<td width="25%" class="td1"><b>Est. Bandwidth Served</b></td>
 						<td class="td1"><b>Upgrade your Account</b></td>
 					</tr>
+					<?php
+						include_once("../controller/DataProvider.php");
+						$query = "SELECT * FROM ACCOUNT WHERE ACCOUNT_ID = ".$_SESSION["fileid"];
+						$result = DataProvider::ExecuteQuery($query);
+						$re = mysql_fetch_array($result,MYSQL_ASSOC);
+						$sum_size = "SELECT * FROM FILE WHERE ACCOUNT_ID = ".$_SESSION["fileid"];
+						$re_sum = DataProvider::ExecuteQuery($sum_size);
+						$re_sum_size = 0;
+						$dem = 0;
+						while($row_sum = mysql_fetch_array($re_sum)){
+							$re_sum_size += $row_sum["size"];
+							$dem++;
+						}
+					?>
 					<tr>
-						<td class="td1"><h4>281.55 MB</h4><h5>From 11 total files</h5></td>
+						<td class="td1"><h4><?php echo round($re_sum_size/(1024*1024),4); ?> MB</h4><h5>From <?php echo $dem;?> total files</h5></td>
 						<td class="td1"><h4>17</h4><h5>Since August 09, 2011</h5></td>
 						<td class="td1"><h4>984.76 MB</h4><h5>From Currently Hosted Files</h5></td>
 						<td class="td1"><h4>Need more?</h4><h5><button>Upgrade Now!</button></h5></td>
@@ -76,16 +90,12 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 				<div class="box1">
 					<table>
 						<tr>
-							<td width="30%">Display Name:</td>
-							<td>Lincoln</td>
-						</tr>
-						<tr>
 							<td>Email Address:</td>
-							<td>linh_nguyen094@yahoo.com</td>
+							<td><?php echo $re["email"];?></td>
 						</tr>
 						<tr>
 							<td>Password::</td>
-							<td>******</td>
+							<td><?php echo $re["password"];?></td>
 						</tr>
 						<tr>
 							<td>Account Created:</td>
@@ -95,19 +105,11 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 							<td>Time Zone:</td>
 							<td>(GMT+07:00) Bangkok, Hanoi, Jakarta</td>
 						</tr>
-						<tr>
-							<td>Email Address:</td>
-							<td>linh_nguyen094@yahoo.com</td>
-						</tr>
 					</table>
 				</div><br/>
 				<h3>Personal Information</h3>
 				<div class="box1">
 					<table>
-						<tr>
-							<td width="30%">Name:</td>
-							<td>Lincoln Lyn</td>
-						</tr>
 						<tr>
 							<td>Gender:</td>
 							<td>male</td>
