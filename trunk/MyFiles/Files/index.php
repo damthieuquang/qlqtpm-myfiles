@@ -54,7 +54,7 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 	</head>
 	<body class="">
 <!--==============================header=================================-->
-	<h2>Hi <span style="color:#00ffff" > <?php echo $_SESSION['myemail']; ?> </span> | <a href="../controller/checkLogout.php">Logout</a></h2>
+	<h2>Hi <a href="../User/"><span style="color:#00ffff" ><?php echo $_SESSION['myemail']; ?></span></a> | <a href="../controller/checkLogout.php">Logout</a></h2>
 		<header class="page1">
 			<div class="container_12">
 				<div class="grid_12">
