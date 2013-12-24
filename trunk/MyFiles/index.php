@@ -490,11 +490,11 @@ else
 <div class="dialog"  id="forgot-form">
     <div id="container">
 		<div class="btnclose" id="forgot-close"></div>
-		<form onSubmit="return false">
+		<form id="formForgot" onSubmit="return false">
 		
 		<label for="name">Email:</label>
 		
-		<input type="name">
+		<input type="name" id="email-forgot">
         <p><br><a href="" id="back-login">Back to login</a></p>
 		
 		<div id="lower">
@@ -509,7 +509,7 @@ else
 
 <!--==============================Sign up=================================-->
 <div class="dialog" id="signup-form">
-    <div id="container">
+    <div id="container" style="margin-top:-200px;">
 		<div class="btnclose" id="signup-close"></div>
 		<form id="frmSignup" action="controller/checkSignup.php" method="post">
 		

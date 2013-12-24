@@ -62,7 +62,19 @@ $(function() {
     });
 	
 	$( "#forgot-submit" ).click(function() {
-		window.location.replace("Files");
+		if($("#email-forgot").val() ==""){
+			return;
+		}
+		$.ajax({
+			type: "POST", // phương thức gởi đi
+			url: "controller/forgotPassword.php", // nơi mà dữ liệu sẽ chuyển đến khi submit
+			data: "email="+ $("#email-forgot").val(), // giá trị post
+			success: function(answer){ // if everything goes well
+				$('form#formForgot').hide(); // ẩn form đi
+				$('div.success').fadeIn(); // hiển thị thẻ div success
+				$('div.success').html(answer); // đặt kết quả trả về từ checkLogin.php vào thẻ div success
+			}
+		});
     });
 	
 	$( "#back-login" ).click(function() {
