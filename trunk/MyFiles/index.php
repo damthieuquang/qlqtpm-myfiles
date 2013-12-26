@@ -334,53 +334,29 @@ else
 				<div class="companies">
 					<div class="grid_3">
 						<img src="images/logo1.jpg" alt="">
-						<div class="text1">Company Name</div>Aliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesent.
+						<div class="text1">THP Group</div>Aliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesent.
 						<br>
-						<a href="#">Go to Site</a>
+						<a href="http://www.thp.com.vn/" target="_blank">Go to Site</a>
 					</div>
 					<div class="grid_3">
 						<img src="images/logo2.jpg" alt="">
-						<div class="text1">Company Name</div>Fusce adipiscing quam id risus gittis, non consequat lacus interdumoin.
+						<div class="text1">VNG Group</div>VNG Corporation was established in Vietnam in 2004 under the name Vinagame. It is an internet company whose main businesses are game publisher, e-commerce, and social networking sites.VNG was the first to launch a licensed online game in Vietnam.
 						<br>
-						<a href="#">Go to Site</a>
+						<a href="http://vng.com.vn/" target="_blank">Go to Site</a>
 					</div>
 					<div class="grid_3">
 						<img src="images/logo3.jpg" alt="">
-						<div class="text1">Company Name</div>Quisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus um.
+						<div class="text1">Co-opmart</div>Quisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus um.
 						<br>
-						<a href="#">Go to Site</a>
+						<a href="http://www.co-opmart.com.vn/" target="_blank">Go to Site</a>
 					</div>
 					<div class="grid_3">
 						<img src="images/logo4.jpg" alt="">
-						<div class="text1">Company Name</div>Courrewerwe abitur vel lorem sit amet ulla ullamcorper fermentumn vitae.
+						<div class="text1">Công ty Cổ phần Thương mại Nguyễn Kim.</div>Courrewerwe abitur vel lorem sit amet ulla ullamcorper fermentumn vitae.
 						<br>
-						<a href="#">Go to Site</a>
+						<a href="http://www.nguyenkim.com/" target="_blank">Go to Site</a>
 					</div>
-					<div class="clear"></div>
-					<div class="grid_3">
-						<img src="images/logo5.jpg" alt="">
-						<div class="text1">Company Name</div>Oiliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesente.
-						<br>
-						<a href="#">Go to Site</a>
-					</div>
-					<div class="grid_3">
-						<img src="images/logo6.jpg" alt="">
-						<div class="text1">Company Name</div>Gusce adipiscing quam id risus gittis, non consequat lacus interdumoiju.
-						<br>
-						<a href="#">Go to Site</a>
-					</div>
-					<div class="grid_3">
-						<img src="images/logo7.jpg" alt="">
-						<div class="text1">Company Name</div>Niuisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus ol.
-						<br>
-						<a href="#">Go to Site</a>
-					</div>
-					<div class="grid_3">
-						<img src="images/logo8.jpg" alt="">
-						<div class="text1">Company Name</div>Fouerourrewerwe abitur vel lorem sit amet ulla ullamcorper fermentum.
-						<br>
-						<a href="#">Go to Site</a>
-					</div>
+					<div class="clear"></div>					
 				</div>
 			</div>
 		</div>
@@ -400,22 +376,22 @@ else
 						<div class="text1">Address</div>
 						<address>
 							<dl>
-								<dt>The Company Name Inc.<br>
-								8901 Marmora Road,<br>
-								Glasgow, D04 89GR.
+								<dt>Đại Học Khoa Học Tự Nhiên TP.Hồ Chí Minh<br>
+								227 Nguyễn Văn Cừ,<br>
+								phường 4, quận 5, TP.Hồ Chí Minh, Việt Nam.
 								</dt>
-								<dd><span>Freephone:</span>+1 800 559 6580</dd>
-								<dd><span>Telephone:</span>+1 800 603 6035</dd>
-								<dd><span>FAX:</span>+1 800 889 9898</dd>
-								<dd>E-mail: <a href="#" class="link-1">mail@demolink.org</a></dd>
-								<dd>Skype: <a href="#" class="link-1">@skypename</a></dd>
+								<dd><span>Freephone:</span>1080</dd>
+								<dd><span>Telephone:</span>1080</dd>
+								<dd><span>FAX:</span>1080</dd>
+								<dd>E-mail: <a href="#" class="link-1">dtquang@gmail.com</a></dd>
+								<dd>Skype: <a href="#" class="link-1">damthieuquang@skype</a></dd>
 							</dl>
 						</address>
 					</div>
 					<div class="grid_3">
 						<div class="text1">&nbsp;</div>
 						<figure class="">
-							<iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+							<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Ho+Chi+Minh+City+University+of+Science&amp;aq=&amp;sll=10.761789,106.681645&amp;sspn=0.012522,0.021136&amp;ie=UTF8&amp;hq=Ho+Chi+Minh+City+University+of+Science&amp;hnear=&amp;radius=15000&amp;t=m&amp;ll=10.762822,106.682439&amp;spn=0.020237,0.027466&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Ho+Chi+Minh+City+University+of+Science&amp;aq=&amp;sll=10.761789,106.681645&amp;sspn=0.012522,0.021136&amp;ie=UTF8&amp;hq=Ho+Chi+Minh+City+University+of+Science&amp;hnear=&amp;radius=15000&amp;t=m&amp;ll=10.762822,106.682439&amp;spn=0.020237,0.027466&amp;z=15&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 						</figure>
 					</div>
 					<div class="grid_5 prefix_1">
