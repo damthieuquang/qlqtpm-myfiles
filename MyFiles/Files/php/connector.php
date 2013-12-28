@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 error_reporting(0); // Set E_ALL for debuging
 
 include_once dirname(__FILE__).DIRECTORY_SEPARATOR.'elFinderConnector.class.php';
@@ -29,6 +29,12 @@ function access($attr, $path, $data, $volume) {
 $ini_array = parse_ini_file("../../config.ini");
 $opts = array(
     'roots'  => array(
+		array(
+			'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
+			'path'          => '../files/' . $_SESSION['fileid'] . '/HOME',         // path to files (REQUIRED)
+			'URL'           => dirname($_SERVER['PHP_SELF']) . '../files/' . $_SESSION['fileid'] . '/HOME', // URL to files (REQUIRED)
+			'accessControl' => 'access'             // disable and hide dot starting files (OPTIONAL)
+		)/*,
         array( // another root
             'driver' => 'MySQL',
             'host'   => $ini_array["host"],
@@ -37,7 +43,7 @@ $opts = array(
             'db'     => $ini_array["database"],
             'path'   => 1,
 			'files_table'   => 'file',
-        )
+        )*/
     )
 );
 

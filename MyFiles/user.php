@@ -8,9 +8,8 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 	<head>
 		<meta charset="utf-8">
 		<title>MyFiles | User Manager</title>
-		<link rel="icon" href="../Admin/images/favicon.ico">
-		<link rel="shortcut icon" href="../Admin/images/favicon.ico" />
-		<link rel="stylesheet" href="../Admin/css/stylemin.css">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="admin/css/stylemin.css">
 		
 		<!--[if lt IE 8]>
 			<div style=' clear: both; text-align:center; position: relative;'>
@@ -24,32 +23,14 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 			<link rel="stylesheet" media="screen" href="css/ie.css">
 		<![endif]-->
         
-       
-        	<!-- jQuery and jQuery UI (REQUIRED) -->
-		<link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css">
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-
-		<!-- elFinder CSS (REQUIRED) -->
-		<link rel="stylesheet" type="text/css" media="screen" href="css/elfinder.min.css">
-		<link rel="stylesheet" type="text/css" media="screen" href="css/theme.css">
-
-		<!-- elFinder JS (REQUIRED) -->
-		<script type="text/javascript" src="js/elfinder.min.js"></script>
-
-		<!-- elFinder translation (OPTIONAL) -->
-		<script type="text/javascript" src="js/i18n/elfinder.ru.js"></script>
-		
-		<!-- elFinder initialization (REQUIRED) -->
-        
 	</head>
 	<body class="">
 <!--==============================header=================================-->
-	<h2>Hi <span style="color:#00ffff" > <?php echo $_SESSION['myemail']; ?> </span> | <a href="../controller/checkLogout.php">Logout</a></h2>
+	<h2>Hi <span style="color:#00ffff" > <?php echo $_SESSION['myemail']; ?> </span> | <a href="controller/checkLogout.php">Logout</a></h2>
 		<header class="page1">
 			<div class="container_12">
 				<div class="grid_12">
-					<h1><a href="../Files/" ><img src="../Admin/images/logo.png"></a></h1>
+					<h1><a href="." ><img src="images/logo.png"></a></h1>
 				</div>
 				<div class="clear"></div>
 				<h1>| User profile</h1>
@@ -66,7 +47,7 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 						<td class="td1"><b>Upgrade your Account</b></td>
 					</tr>
 					<?php
-						include_once("../controller/DataProvider.php");
+						include_once("controller/DataProviderRoot.php");
 						$query = "SELECT * FROM ACCOUNT WHERE ACCOUNT_ID = ".$_SESSION["fileid"];
 						$result = DataProvider::ExecuteQuery($query);
 						$re = mysql_fetch_array($result,MYSQL_ASSOC);
@@ -128,7 +109,7 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 			<div class="container_12">
 				<div class="grid_12">
 					<div class="copy">
-						<a href=""><img src="../Admin/images/footer_logo.png" alt=""></a>  &copy; 2013. <br>Website designed by Group 11.<br>
+						<a href=""><img src="images/footer_logo.png" alt="" style="float:left;"></a>  <div style="margin: 0 0 10px 10px; float:left;" >&copy; 2013.</div> <div style="float:none; margin-top:35px;">Website designed by Group 11.</div>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -140,5 +121,5 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 <?php
 }
 else
-	header('Location: ../index.php');
+	header('Location: login.php');
 ?>

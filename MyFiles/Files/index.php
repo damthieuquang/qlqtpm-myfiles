@@ -54,11 +54,13 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 	</head>
 	<body class="">
 <!--==============================header=================================-->
-	<h2>Hi <a href="../User/"><span style="color:#00ffff" ><?php echo $_SESSION['myemail']; ?></span></a> | <a href="../controller/checkLogout.php">Logout</a></h2>
 		<header class="page1">
 			<div class="container_12">
 				<div class="grid_12">
 					<h1><a href="" ><img src="../images/logo.png"></a></h1>
+                    <div style="padding:15px 10px 0 0;">
+                    <h2>Hi <a href="../user.php"><span style="color:#00ffff" ><?php echo $_SESSION['myemail']; ?></span></a> | <a href="../controller/checkLogout.php">Logout</a></h2>
+                    </div>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -82,5 +84,5 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 <?php
 }
 else
-	header('Location: ../index.php');
+	header('Location: ../login.php');
 ?>
