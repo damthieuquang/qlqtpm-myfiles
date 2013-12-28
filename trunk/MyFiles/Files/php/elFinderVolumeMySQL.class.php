@@ -61,6 +61,18 @@ class elFinderVolumeMySQL extends elFinderVolumeDriver {
 	 **/
 	public function __construct() {
 		$opts = array(
+			'host'          => 'sql102.byethost9.com',
+			'user'          => 'b9_13969328',
+			'pass'          => '12345678',
+			'db'            => 'b9_13969328_myfiles',
+			'port'          => null,
+			'socket'        => null,
+			'files_table'   => 'file',
+			'tmbPath'       => '',
+			'tmpPath'       => ''
+		);
+		/*
+		$opts = array(
 			'host'          => 'localhost',
 			'user'          => 'root',
 			'pass'          => '123456',
@@ -70,7 +82,7 @@ class elFinderVolumeMySQL extends elFinderVolumeDriver {
 			'files_table'   => 'file',
 			'tmbPath'       => '',
 			'tmpPath'       => ''
-		);
+		);*/
 		$this->options = array_merge($this->options, $opts);
 		$this->options['mimeDetect'] = 'internal';
 	}

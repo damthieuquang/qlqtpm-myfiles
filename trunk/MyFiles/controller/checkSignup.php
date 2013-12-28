@@ -5,15 +5,15 @@
 	include_once("MailHandler.php");
 	if($_POST){
 		// Đưa dữ liệu vào các biến
-		$email = $_POST['email'];
-		$password = md5($_POST['password']);
-		$repassword = md5($_POST['repassword']);
+		$email = $_REQUEST['email'];
+		$password = md5($_REQUEST['password']);
+		$repassword = md5($_REQUEST['repassword']);
+
+		//$email=strip_tags(mysql_real_escape_string($email)); 
+		//$password=strip_tags(mysql_real_escape_string($password));
+		//$repassword=strip_tags(mysql_real_escape_string($repassword));
 		
-		$email=strip_tags(mysql_real_escape_string($email)); 
-		$password=strip_tags(mysql_real_escape_string($password));
-		$repassword=strip_tags(mysql_real_escape_string($repassword));
-		
-        $sql = "SELECT EMAIL FROM ACCOUNT WHERE EMAIL = '$email'";
+        $sql = "SELECT `email` FROM `account` WHERE `email` = '$email'";
 		$count = DataProvider::ExecuteQuery($sql);
 		if (mysql_num_rows($count) == 1)
 		{
@@ -33,7 +33,7 @@
 		$result = DataProvider::ExecuteQuery($query);
 		if ($result)
 		{
-			$query = "SELECT account_id FROM ACCOUNT WHERE EMAIL like '".$email."'";
+			$query = "SELECT `account_id` FROM `account` WHERE `email` like '".$email."'";
 			$result = DataProvider::ExecuteQuery($query);
 			$re = mysql_fetch_array($result,MYSQL_ASSOC);
 			$linlactive = "http://localhost/MyFiles/active.php?id=" . $re['account_id'];

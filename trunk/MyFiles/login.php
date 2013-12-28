@@ -19,7 +19,6 @@ else
 		<link rel="stylesheet" href="css/form.css">
         <link rel="stylesheet" href="css/login.css">
         <script src="js/jquery.js"></script>
-        <script src="js/jquery.js"></script>
         <script>
 			$(function() {	
 				$('#errlogin').hide();

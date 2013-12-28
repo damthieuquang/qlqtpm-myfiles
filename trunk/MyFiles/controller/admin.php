@@ -10,28 +10,20 @@
 		//$email=strip_tags(mysql_real_escape_string($email)); 
 		//$password=strip_tags(mysql_real_escape_string($password));
 		
-        $query = "SELECT * FROM  `account` WHERE `email` = '$email' AND `password` = '$password' and `status` like 'active'";
+        $query = "SELECT * FROM  `account` WHERE `email` = '$email' AND `password` = '$password' and `status` like 'admin'";
 		$result = DataProvider::ExecuteQuery($query);
 		$re = mysql_fetch_array($result,MYSQL_ASSOC);
 		if (mysql_num_rows($result) == 1)
 		{
-			$_SESSION['myemail'] = $email;
+			$_SESSION['admin'] = $email;
 			$_SESSION['fileid'] = $re['account_id'];
 			$year = time() + 31536000;
-			if($_POST['remember']) {
-				setcookie('myemail', $email, $year);
-			}
-			else if(!$_POST['remember']) {
-				if(isset($_COOKIE['myemail'])) {
-					$past = time() - 100;
-					setcookie('myemail', "", $past);
-				}
-			}
+		
 			?>
-            <p ><img src="images/register-success.png"><br>
+            <p ><img src="../images/register-success.png"><br>
             Login successfully!
             </p>
-			<script type='text/JavaScript'>setTimeout('location.href ="Files";',1500);</script>
+			<script type='text/JavaScript'>setTimeout('location.href ="";',1500);</script>
 			<?php
 		}
 		else
