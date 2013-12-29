@@ -48,6 +48,7 @@ $(function() {
     });
 	
 	$( "#forgot-pwd" ).click(function() {
+		$( "#formForgot" )[0].reset();
 		$( "#login-form" ).hide();
 		$( "#forgot-form" ).show();
 		return false;
@@ -58,7 +59,10 @@ $(function() {
 	$( "#forgot-form" ).hide();
 	
 	$( "#forgot-close" ).click(function() {
-		  $( "#forgot-form" ).hide();
+		$('div.success').fadeOut(0);
+		$('form#formForgot').show();
+		$( "#forgot-form" ).hide();
+		  
     });
 	
 	$( "#forgot-submit" ).click(function() {
@@ -78,9 +82,16 @@ $(function() {
     });
 	
 	$( "#back-login" ).click(function() {
+		$( "#frmLogin" )[0].reset();
 		$( "#login-form" ).show();
 		$( "#forgot-form" ).hide();
 		return false;
+    });
+	
+	$( 'body' ).on('click', '#try_itss', function(){
+		  $('div.success').fadeOut(0);
+		  $('form#formForgot').show();
+		  return false;
     });
 	
 	/*-------------------------------SIGN UP-----------------------------*/
@@ -134,6 +145,80 @@ $(function() {
 		  $('div.success').fadeOut(0);
 		  $('form#frmSignup').show();
 		  $( "#signup-form" ).hide();
+		  $('form#formForgot').show();
+		  $( "#forgot-form" ).hide();
+		   $('form#frmChangepass').show();
+		  $( "#changepass-form" ).hide();
 		  return false;
     });
+	
+	/*-------------------------------CHANGE PASSWORD-----------------------------*/
+	$( "#changepass-form" ).hide();
+	
+	$( "#btnChange" ).click(function() {
+		$( "#frmChangepass" )[0].reset();
+		$( "#changepass-form" ).show();
+		return false;
+    });
+	
+	$( "#changepass-close" ).click(function() {
+		$('div.success').fadeOut(0);
+		$('form#frmChangepass').show();
+		$( "#changepass-form" ).hide();
+    });
+	
+	$( "#changePass-submit" ).click(function() {
+		
+		var newPass     = $('#newPass');
+		var reNewPass   = $('#reNewPass');
+		if( newPass.val() == "" || reNewPass.val() == "" ){
+			return;
+		}
+		
+		$.ajax({
+			type: "POST", // phương thức gởi đi
+			url: "controller/changePassword.php", // nơi mà dữ liệu sẽ chuyển đến khi submit
+			data: "id=" + $("#account-id").val() +"&newPass="+ newPass.val() +"&reNewPass="+ reNewPass.val(), // giá trị post
+			success: function(answer){ // if everything goes well
+				$('form#frmChangepass').hide(); // ẩn form đi
+				$('div.success').fadeIn(); // hiển thị thẻ div success
+				$('div.success').html(answer); // đặt kết quả trả về từ checkSignup.php vào thẻ div success
+			}
+		});
+    });
+
+
+	$( 'body' ).on('click', '#OKchange', function(){
+		  $('div.success').fadeOut(0);
+		  $('form#frmChangepass').show();
+		  return false;
+    });
+	
+	$( 'body' ).on('click', '#OKchange', function(){
+		  $('div.success').fadeOut(0);
+		  $('form#frmChangepass').show();
+		  return false;
+    });
+	
+	$( "#ugProfessional" ).click(function() {
+		$.ajax({
+			type: "POST", // phương thức gởi đi
+			url: "controller/upgrade.php", // nơi mà dữ liệu sẽ chuyển đến khi submit
+			data: "id=" + $("#account-id").val() + "&type=2",
+			success: function(){ // if everything goes well
+				window.location.reload();	
+			}
+		});
+	});
+	
+	$( "#ugTeams" ).click(function() {
+		$.ajax({
+			type: "POST", // phương thức gởi đi
+			url: "controller/upgrade.php", // nơi mà dữ liệu sẽ chuyển đến khi submit
+			data: "id=" + $("#account-id").val() + "&type=3",
+			success: function(){ // if everything goes well
+				window.location.reload();	
+			}
+		});
+	});
 });
