@@ -78,7 +78,7 @@ session_start();
 					</tr>
 					<?php
 						include_once("../controller/DataProvider.php");
-						$query = "SELECT * FROM ACCOUNT";
+						$query = "SELECT * FROM `account` where `status` not like 'admin'";
 						$result = DataProvider::ExecuteQuery($query);
 						$dem = 1;
 						while($row = mysql_fetch_array($result,MYSQL_ASSOC))

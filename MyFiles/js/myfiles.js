@@ -1,5 +1,5 @@
 $(function() {
-	$("#filenotfound").height($(window).height()-($("#page1").height()+$("#footer").height()+300));
+	//$("#bgDownload").height($(window).height()-($(".page1").height()+$("#footer").height()+300));
 	/*-------------------------------LOG IN-----------------------------*/
 	$( "#login-form" ).hide();
 	

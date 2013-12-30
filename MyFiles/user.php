@@ -72,6 +72,11 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 				$query = "SELECT `name` FROM `accounttype` WHERE `accounttype_id` = " . $re["accounttype_id"];
 				$result = DataProvider::ExecuteQuery($query);
 				$name = mysql_fetch_array($result,MYSQL_ASSOC);
+				
+				include_once("controller/DirectorySize.php");
+				$path="Files/files/" . '../files/' . $_SESSION['fileid'] . '/HOME'; 
+				$ar=getDirectorySize($path); 
+				
 			?>
             <input type="hidden" id="account-id" value="<?php echo $_SESSION['fileid']; ?>">
 		<div id="page3" class="content" style="background:#334960">
@@ -94,7 +99,7 @@ if (isset($_SESSION['myemail']) || isset($_COOKIE['myemail']))
 				</tr>
 				<tr>
 						<td>Total Storage Used:</td>
-						<td>August 09, 2011</td>
+						<td><?php echo sizeFormat($ar['size'])?></td>
 				</tr>
 				</table>
 			</div>
