@@ -478,8 +478,8 @@ else
 		<input type="submit" value="Send" id="forgot-submit">
 		
 		</div>
+		
 		</form>
-        <div class="success" style="display:none;">Nơi hiển thị kết quả</div>
 	</div>   
 </div>     
 
