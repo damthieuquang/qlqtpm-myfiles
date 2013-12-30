@@ -67,11 +67,11 @@
 						<br class="clear">
 						</label>
 						<label class="message">Password:
-						<input type="text" id="password" value="">
+						<input type="password" id="password" value="">
 						<br class="clear">
 						</label>
 						<div class="clear"></div>
-						<div class="btns"><a data-type="submit" id="sub-confirm" class="link1">Comfirm your account</a>
+						<div class="btns"><a data-type="submit" id="sub-confirm" class="link1">Confirm your account</a>
 						<div class="clear"></div>
 						</div></fieldset></form>
 					</div>
