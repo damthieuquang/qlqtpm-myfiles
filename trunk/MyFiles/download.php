@@ -6,10 +6,14 @@
 		<link rel="icon" href="images/favicon.ico">
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/login.css">
         <link rel="stylesheet" href="css/download.css">
 		<script src="js/jquery.js"></script>
-        <script src="js/myfiles.js"></script>
+        <script>
+		$(function() {
+			$("#content").height(70);
+			$("#page1").height($(window).height()-430);
+		});
+		</script>
 		
 		<!--[if lt IE 8]>
 			<div style=' clear: both; text-align:center; position: relative;'>
@@ -41,32 +45,38 @@
 			</div>
 		</header>
 <!--=======content================================-->
-		<div id="page1" class="content">
+	<div id="page1" class="content" style="min-height:200px;">
         
-     <div class="container">
-	 <?php echo'<div><p style="color:black;font-size:200%;">'.$_GET["name"].'</p></div>';?>
+     <div class="container" id="ctdown">
+     
+	 <?php
+	 if(isset($_GET["name"]) || isset($_GET["target"])|| isset($_GET["download"]) )
+	 {
+	 	echo'<div><p style="color:black;font-size:200%;">'.$_GET["name"].'</p </div>';
+	?>
 	<section id="content">
 	
 		<form action="">
 		
 			<div class="button">
 			<?php
-				if (isset($_SESSION['myemail']))
-				{
-					
-					echo "<a  href="."./Files/php/connector.php?cmd=file&target=".$_GET["target"]."&download=".$_GET["download"].">Download File</a>";
-				}
-			else{
-				echo '<a  id="btnLogin" href="."> Login </a>';
-			}?>
+			echo "<a  href="."./Files/php/connector.php?cmd=file&target=".$_GET["target"]."&download=".$_GET["download"].">Download</a>";
+			?>
 		</div><!-- button -->
->
-			
 		</form><!-- form -->
 			</section><!-- content -->
+            <?php
+	 }
+	 else
+	 {
+		 echo'<div><p style="color:black;font-size:200%;"> File not found</p </div>';
+	 }
+?>		
+            
 </div><!-- container -->
 		</div>
-		
+
+</div>
 <!--==============================footer=================================-->
 		<footer>
 			<div class="container_12">
@@ -79,59 +89,6 @@
 			</div>
 		</footer>
         
-<!--==============================login=================================-->
-<div class="dialog"  id="login-form">
-    <div id="container">
-		<div class="btnclose" id="login-close"></div>
-		<form onSubmit="return false">
-		
-		<label for="name">Email:</label>
-		
-		<input type="name">
-		
-		<label for="username">Password:</label>
-		<p><a href="#">Forgot your password?</a>
-		
-		<input type="password">
-		
-		<div id="lower">
-		
-		<input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
-		
-		<input type="submit" value="Login" id="login-submit">
-		
-		</div>
-		
-		</form>
-	</div>   
-</div>     
-
-<!--==============================Sign up=================================-->
-<div class="dialog" id="signup-form">
-    <div id="container">
-		<div class="btnclose" id="signup-close"></div>
-		<form onSubmit="return false">
-		
-		<label for="name">Email:</label>
-		
-		<input type="name">
-		
-		<label for="username">Password:</label>
-		
-		<input type="password">
-        
-        <label for="username">Re-Password:</label>
-		
-		<input type="password">
-		
-		<div id="lower">
-		<input type="submit" value="Sign Up" id="signup-submit">
-		</div>
-		
-		</form>
-	</div>   
-</div>  
-
 	</body>
 </html>
 
